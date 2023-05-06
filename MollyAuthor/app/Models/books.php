@@ -14,7 +14,5 @@ class books extends Model
         'genre',
         'description',
         'cover',
-        'created_at',
-        'updated_at'
     ];
 }
