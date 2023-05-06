@@ -3,7 +3,7 @@
         <div class="flex space-x-4">
             <a
                 href="#"
-                class="bg-gray-200 text-black rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white"
+                class="text-black rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white"
                 aria-current="page"
                 >Home</a
             >

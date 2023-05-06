@@ -1,6 +1,15 @@
 <template>
     <GuestLayout>
-        <h1>Welcome</h1>
+        <div class="grid sm:grid-cols-3 sm:gap-4 justify-items-center m-10">
+            <div>
+                <img
+                    class="rounded"
+                    src="@/../../public/img/book_image_1.jpg"
+                />
+            </div>
+            <div>2</div>
+            <div>3</div>
+        </div>
     </GuestLayout>
 </template>
 
@@ -13,5 +22,8 @@ export default {
     },
 };
 </script>
-
-<style></style>
+<style scoped>
+h1 {
+    font-family: "Cedarville Cursive", cursive;
+}
+</style>
