@@ -14,109 +14,36 @@
                         @click="open = !open"
                     >
                         <span class="sr-only">Open main menu</span>
-                        <!--
-            Icon when menu is closed.
 
-            Menu open: "hidden", Menu closed: "block"
-          -->
-                        <svg
-                            class="block h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                            />
-                        </svg>
-                        <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-                        <svg
-                            class="hidden h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
+                        <FrontEndNavbarHamburger />
                     </button>
                 </div>
                 <div
                     class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center"
                 >
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <a
-                                href="#"
-                                class="bg-gray-200 text-black rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white"
-                                aria-current="page"
-                                >Home</a
-                            >
-                            <a
-                                href="#"
-                                class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                >Books</a
-                            >
-                            <a
-                                href="#"
-                                class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                >About</a
-                            >
-                            <a
-                                href="#"
-                                class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                >Contact</a
-                            >
-                        </div>
-                    </div>
+                    <FrontEndNavbarMenu />
                 </div>
             </div>
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div v-if="open" class="sm:hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pb-3 pt-2">
-                <a
-                    href="#"
-                    class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    aria-current="page"
-                    >Home</a
-                >
-                <a
-                    href="#"
-                    class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    >Books</a
-                >
-                <a
-                    href="#"
-                    class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    >About</a
-                >
-                <a
-                    href="#"
-                    class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    >Contact</a
-                >
-            </div>
+        <div class="sm:hidden" id="mobile-menu">
+            <FrontEndNavbarMobile v-if="open" />
         </div>
     </nav>
 </template>
 
 <script>
+import FrontEndNavbarMobile from "@/Components/FrontEndNavbarMobile/FrontEndNavbarMobile.vue";
+import FrontEndNavbarMenu from "@/Components/FrontEndNavbarMenu/FrontEndNavbarMenu.vue";
+import FrontEndNavbarHamburger from "@/Components/FrontEndNavbarHamburger/FrontEndNavbarHamburger.vue";
+
 export default {
+    components: {
+        FrontEndNavbarMobile,
+        FrontEndNavbarMenu,
+        FrontEndNavbarHamburger,
+    },
     data() {
         return {
             open: false,
@@ -124,5 +51,3 @@ export default {
     },
 };
 </script>
-
-<style></style>
