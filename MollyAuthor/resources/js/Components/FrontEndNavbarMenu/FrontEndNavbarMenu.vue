@@ -15,7 +15,7 @@
             <a
                 href="#"
                 class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >About</a
+                >Bio</a
             >
             <a
                 href="#"
