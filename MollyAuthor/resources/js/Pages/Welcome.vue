@@ -17,6 +17,13 @@
                 <ul class="m-5">
                     Events
                 </ul>
+                <hr />
+                <img
+                    id="molly-portrait"
+                    src="@/../../public/img/MollyPortrait.jpg"
+                    alt="Molly Portrait"
+                    class="rounded m-5"
+                />
             </div>
         </div>
     </GuestLayout>
@@ -35,5 +42,10 @@ export default {
 h1,
 h2 {
     font-family: "Wix Madefor Display", sans-serif;
+}
+
+#molly-portrait {
+    width: 50%;
+    height: 45%;
 }
 </style>
