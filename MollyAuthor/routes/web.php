@@ -5,6 +5,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\BooksController;
+use App\Models\Books;
+use App\Models\Events;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,8 @@ use App\Http\Controllers\BooksController;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    $events = Events::all();
+    return Inertia::render('Welcome', ['events' => $events]);
 });
 
 Route::get('/dashboard', function () {
@@ -32,6 +35,11 @@ Route::get('/bio', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
+
+Route::get('/books', function () {
+    $books = Books::all();
+    return Inertia::render('Books', ['books' => $books]);
+})->name('books');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
