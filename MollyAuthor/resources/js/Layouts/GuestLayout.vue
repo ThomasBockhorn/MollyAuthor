@@ -1,7 +1,9 @@
 <template>
     <div>
         <FrontEndNavbar />
-        <slot></slot>
+        <div class="pb-10">
+            <slot></slot>
+        </div>
         <FrontEndFooter />
     </div>
 </template>
