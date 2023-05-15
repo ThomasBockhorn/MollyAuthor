@@ -15,7 +15,7 @@
                 </h2>
                 <hr />
                 <ul class="m-5">
-                    Events
+                    Coming Soon...
                 </ul>
                 <hr />
                 <img
