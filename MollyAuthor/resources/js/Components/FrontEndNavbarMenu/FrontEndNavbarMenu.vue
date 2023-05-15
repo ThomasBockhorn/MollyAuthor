@@ -17,10 +17,10 @@
                 class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >Bio</Link
             >
-            <a
-                href="#"
+            <Link
+                href="/contact"
                 class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Contact</a
+                >Contact</Link
             >
         </div>
     </div>
