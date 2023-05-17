@@ -7,10 +7,10 @@
                 aria-current="page"
                 >Home</Link
             >
-            <a
-                href="#"
+            <Link
+                href="/book"
                 class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Books</a
+                >Books</Link
             >
             <Link
                 href="/bio"

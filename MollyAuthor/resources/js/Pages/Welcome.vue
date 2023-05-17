@@ -39,11 +39,6 @@ export default {
 };
 </script>
 <style scoped>
-h1,
-h2 {
-    font-family: "Wix Madefor Display", sans-serif;
-}
-
 #molly-portrait {
     width: 50%;
     height: 45%;

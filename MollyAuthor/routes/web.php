@@ -36,7 +36,7 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
 
-Route::get('/books', function () {
+Route::get('/book', function () {
     $books = Books::all();
     return Inertia::render('Books', ['books' => $books]);
 })->name('books');
