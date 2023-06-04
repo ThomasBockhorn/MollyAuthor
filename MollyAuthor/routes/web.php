@@ -7,6 +7,7 @@ use App\Models\Events;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('books', BooksController::class);
     Route::resource('events', EventsController::class);
-    Route::resource('books', BooksController::class);
 });
 
 require __DIR__.'/auth.php';
