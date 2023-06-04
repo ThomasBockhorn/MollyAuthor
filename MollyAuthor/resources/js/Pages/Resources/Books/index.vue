@@ -9,6 +9,13 @@
                 <div>grid4</div>
             </div>
         </div>
+        <div class="grid justify-items-center absolute bottom-1 left-1">
+            <button
+                class="bg-cyan-500 rounded p-1 border-2 border-black text-white hover:bg-cyan-200 hover:text-black"
+            >
+                Create New Book
+            </button>
+        </div>
     </AuthenticatedLayout>
 </template>
 
