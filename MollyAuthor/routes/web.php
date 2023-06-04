@@ -1,13 +1,13 @@
 <?php
 
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Books;
 use App\Models\Events;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +44,6 @@ Route::get('/book', function () {
 
     return Inertia::render('Books', ['books' => $books]);
 })->name('books');
-
 
 //---------------------- Backend routes ----------------------//
 Route::middleware('auth')->group(function () {
