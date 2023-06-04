@@ -1,12 +1,12 @@
 <?php
 
+use App\Http\Controllers\BooksController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Books;
+use App\Models\Events;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\BooksController;
-use App\Models\Books;
-use App\Models\Events;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,7 @@ use App\Models\Events;
 
 Route::get('/', function () {
     $events = Events::all();
+
     return Inertia::render('Welcome', ['events' => $events]);
 });
 
@@ -38,6 +39,7 @@ Route::get('/contact', function () {
 
 Route::get('/book', function () {
     $books = Books::all();
+
     return Inertia::render('Books', ['books' => $books]);
 })->name('books');
 
