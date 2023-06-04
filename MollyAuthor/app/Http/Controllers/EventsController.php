@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\events;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class EventsController extends Controller
 {
@@ -12,7 +13,9 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        $events = events::all();
+
+        return Inertia::render('Resources/Events', ['events' => $events]);
     }
 
     /**
