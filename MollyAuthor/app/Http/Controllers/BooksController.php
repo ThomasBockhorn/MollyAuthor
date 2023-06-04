@@ -23,7 +23,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Resources/Books/create');
     }
 
     /**

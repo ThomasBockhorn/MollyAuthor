@@ -10,22 +10,24 @@
             </div>
         </div>
         <div class="grid justify-items-center absolute bottom-1 left-1">
-            <button
-                @click="$router.push({ name: 'books.create' })"
+            <Link
+                :href="route('books.create')"
                 class="bg-cyan-500 rounded p-1 border-2 border-black text-white hover:bg-cyan-200 hover:text-black"
             >
                 Create New Book
-            </button>
+            </Link>
         </div>
     </AuthenticatedLayout>
 </template>
 
 <script>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import { Link } from "@inertiajs/vue3";
 
 export default {
     components: {
         AuthenticatedLayout,
+        Link,
     },
 };
 </script>
