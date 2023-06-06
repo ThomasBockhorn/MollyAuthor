@@ -13,6 +13,7 @@
                     name="title"
                     id="title"
                     v-model="form.title"
+                    required
                     class="border-2 border-black rounded p-1"
                 />
                 <label class="text-xl" for="genre">Genre:</label>
@@ -21,6 +22,7 @@
                     name="genre"
                     id="genre"
                     v-model="form.genre"
+                    required
                     class="border-2 border-black rounded p-1"
                 />
                 <label class="text-xl" for="description">Description:</label>
@@ -28,6 +30,7 @@
                     name="description"
                     id="description"
                     v-model="form.description"
+                    required
                     class="border-2 border-black rounded p-1"
                 ></textarea>
                 <label class="text-xl" for="cover">Cover:</label>
@@ -35,6 +38,8 @@
                     type="file"
                     name="cover"
                     id="cover"
+                    required
+                    accept="image/png, image/gif, image/jpeg"
                     class="border-2 border-black rounded p-1"
                 />
                 <button
