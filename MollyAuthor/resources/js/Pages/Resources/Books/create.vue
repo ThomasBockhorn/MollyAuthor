@@ -43,6 +43,7 @@
                     required
                     accept="image/png, image/gif, image/jpeg"
                     class="border-2 border-black rounded p-1"
+                    @change="onChangeFile"
                 />
                 <button
                     type="submit"
@@ -90,6 +91,11 @@ export default {
             form,
             submit,
         };
+    },
+    methods: {
+        onChangeFile(e) {
+            this.form.cover = e.target.files[0];
+        },
     },
 };
 </script>
