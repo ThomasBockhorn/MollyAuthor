@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\books;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class BooksController extends Controller
@@ -33,6 +34,7 @@ class BooksController extends Controller
     {
         Books::create($request->all());
 
+        Storage::disk('public')->put('books/' . $request->file('cover')->getClientOriginalName(), file_get_contents($request->file('cover')));
 
         return redirect()->route('books.index');
     }
