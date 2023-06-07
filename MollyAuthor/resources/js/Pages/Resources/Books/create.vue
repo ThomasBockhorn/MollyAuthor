@@ -32,7 +32,7 @@
                     v-model="form.description"
                     required
                     rows="4"
-                    cols="50"
+                    cols="40"
                     class="border-2 border-black rounded p-1"
                 ></textarea>
                 <label class="text-xl" for="cover">Cover:</label>
