@@ -47,12 +47,12 @@
                                 ></path>
                             </svg>
                         </a>
-                        <a
-                            href="#"
+                        <button
+                            @click="deleteBook(book.id)"
                             class="inline-flex items-center mx-3 px-3 py-2 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
                         >
                             Delete
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -73,6 +73,11 @@ export default {
     },
     props: {
         books: Array,
+    },
+    methods: {
+        deleteBook(id) {
+            this.$inertia.delete(route("books.destroy", id));
+        },
     },
 };
 </script>

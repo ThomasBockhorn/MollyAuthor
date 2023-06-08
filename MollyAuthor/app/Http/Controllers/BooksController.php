@@ -52,7 +52,7 @@ class BooksController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(books $books)
+    public function show(Books $books)
     {
         //
     }
@@ -60,7 +60,7 @@ class BooksController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(books $books)
+    public function edit(Books $books)
     {
         //
     }
@@ -68,7 +68,7 @@ class BooksController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, books $books)
+    public function update(Request $request, Books $books)
     {
         //
     }
@@ -76,8 +76,14 @@ class BooksController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(books $books)
+    public function destroy($id)
     {
-        //
+        $book = Books::find($id);
+
+        Storage::delete('public/covers/' . $book->cover);
+
+        $book->delete();
+
+        return redirect()->route('books.index');
     }
 }
