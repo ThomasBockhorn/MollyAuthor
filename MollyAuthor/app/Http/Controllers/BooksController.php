@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\books;
+use App\Models\Books;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -14,7 +14,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        $books = books::all();
+        $books = Books::all();
 
         return Inertia::render('Resources/Books/index', ['books' => $books]);
     }
@@ -32,9 +32,20 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        Books::create($request->all());
+       if($request->hasFile('cover')){
+            $fileName = time() . '.' . $request->cover->extension();
 
-        Storage::disk('public')->put('books/' . $request->file('cover')->getClientOriginalName(), file_get_contents($request->file('cover')));
+            $request->cover->storeAs('public/covers', $fileName);
+       }
+
+       Books::create([
+           'title' => $request->title,
+           'author' => $request->author,
+           'cover' => $fileName,
+           'description' => $request->description,
+           'genre' => $request->genre,
+       ]);
+
 
         return redirect()->route('books.index');
     }
