@@ -40,7 +40,6 @@ class BooksController extends Controller
 
        Books::create([
            'title' => $request->title,
-           'author' => $request->author,
            'cover' => $fileName,
            'description' => $request->description,
            'genre' => $request->genre,

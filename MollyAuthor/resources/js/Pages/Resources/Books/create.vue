@@ -7,61 +7,77 @@
                 @submit.prevent="submit"
                 class="grid gap-4 justify-items-center m-10"
             >
-                <label class="text-xl" for="title">Title:</label>
-                <input
-                    type="text"
-                    name="title"
-                    id="title"
-                    v-model="form.title"
-                    required
-                    class="border-2 border-black rounded p-1"
-                />
-                <label class="text-xl" for="genre">Genre:</label>
-                <input
-                    type="text"
-                    name="genre"
-                    id="genre"
-                    v-model="form.genre"
-                    required
-                    class="border-2 border-black rounded p-1"
-                />
-                <label class="text-xl" for="description">Description:</label>
-                <textarea
-                    name="description"
-                    id="description"
-                    v-model="form.description"
-                    required
-                    rows="4"
-                    cols="40"
-                    class="border-2 border-black rounded p-1"
-                ></textarea>
-                <label class="text-xl" for="cover">Cover:</label>
-                <input
-                    type="file"
-                    name="cover"
-                    id="cover"
-                    required
-                    accept="image/png, image/gif, image/jpeg"
-                    class="border-2 border-black rounded p-1"
-                    @change="onChangeFile"
-                />
+                <div class="relative z-0 w-full mb-6 group">
+                    <input
+                        type="text"
+                        name="title"
+                        id="title"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" "
+                        required
+                        v-model="form.title"
+                    />
+                    <label
+                        for="title"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >Title</label
+                    >
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <input
+                        type="text"
+                        name="genre"
+                        id="genre"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" "
+                        required
+                        v-model="form.genre"
+                    />
+                    <label
+                        for="genre"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >Genre</label
+                    >
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <label
+                        for="description"
+                        class="block mb-2 text-sm font-medium text-gray-500"
+                        >Description</label
+                    >
+                    <textarea
+                        id="description"
+                        rows="4"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Write your description here..."
+                        required
+                        v-model="form.description"
+                    ></textarea>
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <label
+                        class="block mb-2 text-sm font-medium text-gray-500"
+                        for="file_input"
+                        >Upload Cover Image</label
+                    >
+                    <input
+                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                        id="file_input"
+                        type="file"
+                        accept="image/*"
+                        required
+                        @change="onChangeFile"
+                    />
+                </div>
                 <button
                     type="submit"
-                    class="bg-cyan-500 rounded p-1 border-2 border-black text-white hover:bg-cyan-200 hover:text-black"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                 >
                     Submit
                 </button>
             </form>
         </div>
-        <div class="grid justify-items-center absolute bottom-1 left-1">
-            <Link
-                :href="route('books.index')"
-                class="bg-cyan-500 rounded p-1 border-2 border-black text-white hover:bg-cyan-200 hover:text-black inline text-center"
-            >
-                Go Back
-            </Link>
-        </div></authenticatedLayout
-    >
+    </authenticatedLayout>
 </template>
 
 <script>

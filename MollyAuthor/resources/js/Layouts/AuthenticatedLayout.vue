@@ -42,6 +42,12 @@ const showingNavigationDropdown = ref(false);
                                     Books
                                 </NavLink>
                                 <NavLink
+                                    :href="route('books.create')"
+                                    :active="route().current('books.create')"
+                                >
+                                    Create a Book
+                                </NavLink>
+                                <NavLink
                                     :href="route('events.index')"
                                     :active="route().current('events.index')"
                                 >
