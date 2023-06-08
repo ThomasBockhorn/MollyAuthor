@@ -51,12 +51,10 @@ class BooksController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Request $request)
+    public function edit(Book $book): \Inertia\Response
     {
-
-        return Inertia::render('Resources/Books/edit', compact('request'));
+        return Inertia::render('Resources/Books/edit', compact('book'));
     }
-
     /**
      * Update the specified resource in storage.
      */
