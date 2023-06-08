@@ -46,7 +46,7 @@ export default {
     },
     props: {
         books: {
-            type: Array,
+            type: Object,
         },
     },
 };

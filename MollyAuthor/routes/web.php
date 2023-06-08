@@ -3,7 +3,7 @@
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Books;
+use App\Models\Book;
 use App\Models\Events;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +24,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     $events = Events::all();
 
-    return Inertia::render('Welcome', ['events' => $events]);
+    return Inertia::render('Welcome', compact('events'));
 });
 
 Route::get('/dashboard', function () {
@@ -40,9 +40,9 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/book', function () {
-    $books = Books::all();
+    $books = Book::all();
 
-    return Inertia::render('Books', ['books' => $books]);
+    return Inertia::render('Books', compact('books'));
 })->name('books');
 
 //---------------------- Backend routes ----------------------//
