@@ -6,6 +6,7 @@
             <form
                 @submit.prevent="submit"
                 class="grid gap-4 justify-items-center m-10"
+                enctype="multipart/form-data"
             >
                 <div class="relative z-0 w-full mb-6 group">
                     <input
@@ -82,9 +83,7 @@
 
 <script>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import { Link } from "@inertiajs/vue3";
-import { reactive } from "vue";
-import { router } from "@inertiajs/vue3";
+import { Link, useForm } from "@inertiajs/vue3";
 
 export default {
     components: {
@@ -92,7 +91,7 @@ export default {
         Link,
     },
     setup() {
-        const form = reactive({
+        const form = useForm({
             title: "",
             genre: "",
             description: "",
@@ -100,7 +99,7 @@ export default {
         });
 
         function submit() {
-            router.post("/books", form);
+            form.post("/books", form);
         }
 
         return {
