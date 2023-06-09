@@ -1,7 +1,7 @@
 <template>
     <authenticatedLayout>
         <div class="m-5">
-            <h1 class="text-center text-2xl">Create a Book</h1>
+            <h1 class="text-center text-2xl">Edit a Book</h1>
 
             <form
                 @submit.prevent="submit"
@@ -83,9 +83,7 @@
 
 <script>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import { Link } from "@inertiajs/vue3";
-import { reactive } from "vue";
-import { router } from "@inertiajs/vue3";
+import { Link, useForm, router } from "@inertiajs/vue3";
 
 export default {
     components: {
@@ -98,16 +96,29 @@ export default {
         },
     },
     setup(props) {
-        const form = reactive({
+        const form = useForm({
             title: props.book.title,
             genre: props.book.genre,
             description: props.book.description,
-            cover: "",
         });
 
         function submit() {
-            alert(`/books/${props.book.id}`);
-            router.put(`/books/${props.book.id}`, form);
+            router.post(
+                `/books/${props.book.id}`,
+                {
+                    _method: "PUT",
+                    title: form.title,
+                    genre: form.genre,
+                    description: form.description,
+                    cover: form.cover,
+                },
+                {
+                    preserveState: true,
+                    onSuccess: () => {
+                        resetForm();
+                    },
+                }
+            );
         }
 
         return {

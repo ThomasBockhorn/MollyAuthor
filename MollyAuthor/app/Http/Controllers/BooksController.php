@@ -32,18 +32,18 @@ class BooksController extends Controller
      */
     public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
-       if($request->hasFile('cover')){
-            $fileName = time() . '.' . $request->cover->extension();
+        if ($request->hasFile('cover')) {
+            $fileName = time().'.'.$request->cover->extension();
 
             $request->cover->storeAs('public/covers', $fileName);
-       }
+        }
 
-       Book::create([
-           'title' => $request->title,
-           'cover' => $fileName,
-           'description' => $request->description,
-           'genre' => $request->genre,
-       ]);
+        Book::create([
+            'title' => $request->title,
+            'cover' => $fileName,
+            'description' => $request->description,
+            'genre' => $request->genre,
+        ]);
 
         return redirect()->route('books.index');
     }
@@ -55,19 +55,21 @@ class BooksController extends Controller
     {
         return Inertia::render('Resources/Books/edit', compact('book'));
     }
+
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Book $books)
+    public function update(Request $request , Book $book)
     {
+        if ($request->hasFile('cover')) {
+            $fileName = time().'.'.$request->cover->extension();
 
-        if($request->hasFile('cover')){
-            $fileName = time() . '.' . $request->cover->extension();
+            Storage::delete('public/covers/'.$book->cover);
 
             $request->cover->storeAs('public/covers', $fileName);
         }
 
-        $books->update([
+        $book->update([
             'title' => $request->title,
             'cover' => $fileName,
             'description' => $request->description,
@@ -83,7 +85,7 @@ class BooksController extends Controller
     public function destroy(Book $book)
     {
 
-        Storage::delete('public/covers/' . $book->cover);
+        Storage::delete('public/covers/'.$book->cover);
 
         $book->delete();
 
