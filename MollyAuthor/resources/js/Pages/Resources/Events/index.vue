@@ -9,8 +9,6 @@
                         <th>Description</th>
                         <th>Location</th>
                         <th>Date</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
                     </tr>
                     <tr v-for="event in events" :key="event.id">
                         <td>{{ event.title }}</td>
@@ -18,12 +16,12 @@
                         <td>{{ event.location }}</td>
                         <td>{{ event.date }}</td>
                         <td>
-                            <button class="rounded-full bg-green text-white">
+                            <button class="rounded bg-green-500 text-white p-2">
                                 Edit
                             </button>
                         </td>
                         <td>
-                            <button class="rounded-full bg-red text-white">
+                            <button class="rounded bg-red-500 text-white p-2">
                                 Delete
                             </button>
                         </td>
