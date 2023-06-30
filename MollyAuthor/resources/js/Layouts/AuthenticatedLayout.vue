@@ -53,6 +53,12 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     Events
                                 </NavLink>
+                                <NavLink
+                                    :href="route('events.create')"
+                                    :active="route().current('events.create')"
+                                >
+                                    Create an Event
+                                </NavLink>
                             </div>
                         </div>
 
@@ -171,6 +177,12 @@ const showingNavigationDropdown = ref(false);
                             :active="route().current('events.index')"
                         >
                             Events
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            :href="route('events.create')"
+                            :active="route().current('events.create')"
+                        >
+                            Create an Event
                         </ResponsiveNavLink>
                     </div>
 
