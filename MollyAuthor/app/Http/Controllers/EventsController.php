@@ -31,7 +31,14 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Event::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'location' => $request->location,
+            'date' => $request->date,
+        ]);
+
+        return redirect()->route('events.index');
     }
 
     /**
