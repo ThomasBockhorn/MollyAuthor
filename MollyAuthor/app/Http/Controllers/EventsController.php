@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\events;
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -13,7 +13,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = events::all();
+        $events = Event::all();
 
         return Inertia::render('Resources/Events/index', ['events' => $events]);
     }
@@ -37,7 +37,7 @@ class EventsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(events $events)
+    public function show(Event $events)
     {
         //
     }
@@ -45,7 +45,7 @@ class EventsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(events $events)
+    public function edit(Event $events)
     {
         //
     }
@@ -53,7 +53,7 @@ class EventsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, events $events)
+    public function update(Request $request, Event $events)
     {
         //
     }
@@ -61,7 +61,7 @@ class EventsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(events $events)
+    public function destroy(Event $events)
     {
         //
     }
