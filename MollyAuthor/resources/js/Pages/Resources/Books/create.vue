@@ -83,12 +83,11 @@
 
 <script>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import { Link, useForm } from "@inertiajs/vue3";
+import { useForm } from "@inertiajs/vue3";
 
 export default {
     components: {
         AuthenticatedLayout,
-        Link,
     },
     setup() {
         const form = useForm({
