@@ -42,7 +42,7 @@ Route::get('/contact', function () {
 Route::get('/book', function () {
     $books = Book::all();
 
-    return Inertia::render('Books', compact('books'));
+    return Inertia::render('Book', compact('books'));
 })->name('books');
 
 //---------------------- Backend routes ----------------------//

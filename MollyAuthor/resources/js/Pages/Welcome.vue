@@ -16,7 +16,9 @@
                 <hr />
                 <ul class="m-5">
                     <li v-for="event in events" :key="event.id" class="mt-3">
-                        <h3 class="text-2xl">{{ event.title }}</h3>
+                        <h3 class="text-2xl text-center mb-2">
+                            {{ event.title }}
+                        </h3>
                         <p class="text-xl">{{ event.location }}</p>
                         <p class="text-xl">{{ event.description }}</p>
                         <p class="text-xl">{{ event.date }}</p>
@@ -28,7 +30,7 @@
                     id="molly-portrait"
                     src="img/MollyPortrait.jpg"
                     alt="Molly Portrait"
-                    class="rounded m-5 mx-auto"
+                    class="rounded m-5 mx-auto d-block w-50"
                 />
             </div>
         </div>
