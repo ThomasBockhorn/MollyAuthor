@@ -16,9 +16,13 @@
                         <td>{{ event.location }}</td>
                         <td>{{ event.date }}</td>
                         <td>
-                            <button class="rounded bg-green-500 text-white p-2">
+                            <Link
+                                :href="route('events.edit', event.id)"
+                                :data="{ event }"
+                                class="rounded bg-green-500 text-white p-2"
+                            >
                                 Edit
-                            </button>
+                            </Link>
                         </td>
                         <td>
                             <button class="rounded bg-red-500 text-white p-2">
@@ -34,9 +38,12 @@
 
 <script>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import { Link } from "@inertiajs/vue3";
+
 export default {
     components: {
         AuthenticatedLayout,
+        Link,
     },
     props: {
         events: {
