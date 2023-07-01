@@ -42,14 +42,6 @@ class EventsController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Event $events)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Event $events)
