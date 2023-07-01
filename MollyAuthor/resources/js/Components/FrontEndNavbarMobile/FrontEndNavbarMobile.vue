@@ -7,7 +7,7 @@
             >Home</Link
         >
         <Link
-            href="/book"
+            href="/literature"
             class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >Books</Link
         >

@@ -39,10 +39,10 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
 
-Route::get('/book', function () {
+Route::get('/literature', function () {
     $books = Book::all();
 
-    return Inertia::render('Book', compact('books'));
+    return Inertia::render('Literature', compact('books'));
 })->name('books');
 
 //---------------------- Backend routes ----------------------//
