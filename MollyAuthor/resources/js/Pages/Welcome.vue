@@ -4,7 +4,7 @@
             <div>
                 <img
                     class="rounded"
-                    src="@/../../public/img/book_image_1.jpg"
+                    src="img/book_image_1.jpg"
                     alt="book cover"
                 />
             </div>
@@ -26,9 +26,9 @@
                 <hr />
                 <img
                     id="molly-portrait"
-                    src="@/../../public/img/MollyPortrait.jpg"
+                    src="img/MollyPortrait.jpg"
                     alt="Molly Portrait"
-                    class="rounded m-5"
+                    class="rounded m-5 mx-auto"
                 />
             </div>
         </div>
