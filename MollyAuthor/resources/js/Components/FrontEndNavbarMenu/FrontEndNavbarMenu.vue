@@ -8,7 +8,7 @@
                 >Home</Link
             >
             <Link
-                href="/book"
+                :href="route('books.index')"
                 class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium"
                 >Books</Link
             >
