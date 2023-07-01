@@ -18,16 +18,20 @@
                         <td>
                             <Link
                                 :href="route('events.edit', event.id)"
-                                :data="{ event }"
+                                method="get"
                                 class="rounded bg-green-500 text-white p-2"
                             >
                                 Edit
                             </Link>
                         </td>
                         <td>
-                            <button class="rounded bg-red-500 text-white p-2">
+                            <Link
+                                :href="route('events.destroy', event.id)"
+                                class="rounded bg-red-500 text-white p-2"
+                                method="delete"
+                            >
                                 Delete
-                            </button>
+                            </Link>
                         </td>
                     </tr>
                 </table>

@@ -67,8 +67,10 @@ class EventsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Event $events)
+    public function destroy(Event $event)
     {
-        //
+        $event->delete();
+
+        return redirect()->route('events.index');
     }
 }
