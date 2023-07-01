@@ -4,7 +4,7 @@ use App\Http\Controllers\BooksController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Book;
-use App\Models\Events;
+use App\Models\Event;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,7 +22,7 @@ use Inertia\Inertia;
 
 //---------------------- Frontend routes ----------------------//
 Route::get('/', function () {
-    $events = Events::all();
+    $events = Event::all();
 
     return Inertia::render('Welcome', compact('events'));
 });
