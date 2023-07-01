@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('/books', BooksController::class)->except(['show']);
-    Route::resource('/events', EventsController::class);
+    Route::resource('/events', EventsController::class)->except(['show']);;
 });
 
 require __DIR__.'/auth.php';
