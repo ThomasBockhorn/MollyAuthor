@@ -4,7 +4,7 @@
             <h1 class="text-center text-2xl">Events</h1>
             <div class="mt-5">
                 <table class="mx-auto w-full">
-                    <tr>
+                    <tr class="mb-5">
                         <th>Title</th>
                         <th>Description</th>
                         <th>Location</th>
@@ -56,5 +56,9 @@ export default {
     },
 };
 </script>
-
-<style></style>
+<style scoped>
+th,
+td {
+    padding: 10px;
+}
+</style>
