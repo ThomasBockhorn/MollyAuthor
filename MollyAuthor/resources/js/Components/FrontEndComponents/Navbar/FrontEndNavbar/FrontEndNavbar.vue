@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import FrontEndNavbarMobile from "@/Components/FrontEndNavbarMobile/FrontEndNavbarMobile.vue";
-import FrontEndNavbarMenu from "@/Components/FrontEndNavbarMenu/FrontEndNavbarMenu.vue";
-import FrontEndNavbarHamburger from "@/Components/FrontEndNavbarHamburger/FrontEndNavbarHamburger.vue";
+import FrontEndNavbarMobile from "@/Components/FrontEndComponents/Navbar/FrontEndNavbarMobile/FrontEndNavbarMobile.vue";
+import FrontEndNavbarMenu from "@/Components/FrontEndComponents/Navbar/FrontEndNavbarMenu/FrontEndNavbarMenu.vue";
+import FrontEndNavbarHamburger from "@/Components/FrontEndComponents/Navbar/FrontEndNavbarHamburger/FrontEndNavbarHamburger.vue";
 
 export default {
     components: {
