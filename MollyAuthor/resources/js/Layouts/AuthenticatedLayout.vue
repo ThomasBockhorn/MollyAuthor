@@ -2,9 +2,10 @@
 import { ref } from "vue";
 import Dropdown from "@/Components/Dropdown.vue";
 import DropdownLink from "@/Components/DropdownLink.vue";
-import NavLink from "@/Components/NavLink.vue";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
 import { Link } from "@inertiajs/vue3";
+import BackendNavbar from "@/Components/BackendComponents/Navbar/BackendNavbar/BackendNavbar.vue";
+import ResponsiveBackendNavbar from "@/Components/BackendComponents/Navbar/ResponsiveNavbar/ResponsiveBackendNavbar.vue";
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -25,40 +26,7 @@ const showingNavigationDropdown = ref(false);
                             </div>
 
                             <!-- Navigation Links -->
-                            <div
-                                class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
-                            >
-                                <NavLink
-                                    :href="route('dashboard')"
-                                    :active="route().current('dashboard')"
-                                >
-                                    Dashboard
-                                </NavLink>
-                                <NavLink
-                                    :href="route('books.index')"
-                                    :active="route().current('books.index')"
-                                >
-                                    Books
-                                </NavLink>
-                                <NavLink
-                                    :href="route('books.create')"
-                                    :active="route().current('books.create')"
-                                >
-                                    Create a Book
-                                </NavLink>
-                                <NavLink
-                                    :href="route('events.index')"
-                                    :active="route().current('events.index')"
-                                >
-                                    Events
-                                </NavLink>
-                                <NavLink
-                                    :href="route('events.create')"
-                                    :active="route().current('events.create')"
-                                >
-                                    Create an Event
-                                </NavLink>
-                            </div>
+                            <BackendNavbar />
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -158,38 +126,7 @@ const showingNavigationDropdown = ref(false);
                     }"
                     class="sm:hidden"
                 >
-                    <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink
-                            :href="route('dashboard')"
-                            :active="route().current('dashboard')"
-                        >
-                            Dashboard
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink
-                            :href="route('books.index')"
-                            :active="route().current('books.index')"
-                        >
-                            Books
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink
-                            :href="route('books.create')"
-                            :active="route().current('books.create')"
-                        >
-                            Create a Book
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink
-                            :href="route('events.index')"
-                            :active="route().current('events.index')"
-                        >
-                            Events
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink
-                            :href="route('events.create')"
-                            :active="route().current('events.create')"
-                        >
-                            Create an Event
-                        </ResponsiveNavLink>
-                    </div>
+                    <ResponsiveBackendNavbar />
 
                     <!-- Responsive Settings Options -->
                     <div class="pt-4 pb-1 border-t border-gray-200">
