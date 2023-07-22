@@ -173,6 +173,12 @@ const showingNavigationDropdown = ref(false);
                             Books
                         </ResponsiveNavLink>
                         <ResponsiveNavLink
+                            :href="route('books.create')"
+                            :active="route().current('books.create')"
+                        >
+                            Create a Book
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
                             :href="route('events.index')"
                             :active="route().current('events.index')"
                         >
