@@ -30,6 +30,11 @@
                         <p class="mb-3 font-normal text-gray-700">
                             {{ book.description }}
                         </p>
+                        <p class="mb-3 font-normal text-gray-700">
+                            <a href="{{ book.purchase_link }}">{{
+                                book.purchase_link
+                            }}</a>
+                        </p>
                     </div>
                 </div>
             </div>
