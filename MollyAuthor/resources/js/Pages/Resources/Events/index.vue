@@ -2,7 +2,7 @@
     <AuthenticatedLayout>
         <div class="m-5">
             <h1 class="text-center text-2xl">Events</h1>
-            <div class="mt-5">
+            <div class="mt-5 overflow-hidden">
                 <table class="mx-auto w-full">
                     <tr class="mb-5">
                         <th>Title</th>
