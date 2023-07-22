@@ -1,7 +1,6 @@
 <template>
     <AuthenticatedLayout>
         <div class="m-5">
-            <h1 class="text-center text-2xl">Books</h1>
             <div class="grid sm:grid-cols-2 sm:gap-4 justify-items-center m-10">
                 <div
                     class="max-w-sm bg-white border border-gray-200 rounded-lg shadow"
