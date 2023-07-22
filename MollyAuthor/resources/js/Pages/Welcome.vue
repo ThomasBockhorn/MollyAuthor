@@ -30,7 +30,7 @@
                     id="molly-portrait"
                     src="img/MollyPortrait.jpg"
                     alt="Molly Portrait"
-                    class="rounded m-5 mx-auto d-block w-50"
+                    class="rounded m-5 d-block w-100"
                 />
             </div>
         </div>
