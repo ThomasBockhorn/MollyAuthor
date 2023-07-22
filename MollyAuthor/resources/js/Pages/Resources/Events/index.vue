@@ -7,14 +7,14 @@
                     <tr class="mb-5">
                         <th>Title</th>
                         <th>Description</th>
-                        <th>Location</th>
-                        <th>Date</th>
+                        <th v-if="windowWidth >= 768">Location</th>
+                        <th v-if="windowWidth >= 768">Date</th>
                     </tr>
                     <tr v-for="event in events" :key="event.id">
                         <td>{{ event.title }}</td>
                         <td>{{ event.description }}</td>
-                        <td>{{ event.location }}</td>
-                        <td>{{ event.date }}</td>
+                        <td v-if="windowWidth >= 768">{{ event.location }}</td>
+                        <td v-if="windowWidth >= 768">{{ event.date }}</td>
                         <td>
                             <Link
                                 :href="route('events.edit', event.id)"
@@ -45,6 +45,17 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Link } from "@inertiajs/vue3";
 
 export default {
+    data() {
+        return {
+            windowWidth: window.innerWidth,
+        };
+    },
+    mounted() {
+        window.addEventListener("resize", this.handleResize);
+    },
+    beforeDestroy() {
+        window.removeEventListener("resize", this.handleResize);
+    },
     components: {
         AuthenticatedLayout,
         Link,
@@ -52,6 +63,11 @@ export default {
     props: {
         events: {
             type: Object,
+        },
+    },
+    methods: {
+        handleResize() {
+            this.windowWidth = window.innerWidth;
         },
     },
 };
