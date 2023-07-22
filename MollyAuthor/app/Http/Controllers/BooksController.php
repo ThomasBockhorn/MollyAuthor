@@ -43,6 +43,7 @@ class BooksController extends Controller
             'cover' => $fileName,
             'description' => $request->description,
             'genre' => $request->genre,
+            'purchase_link' => $request->purchase_link,
         ]);
 
         return redirect()->route('books.index');
@@ -74,6 +75,7 @@ class BooksController extends Controller
             'cover' => $fileName,
             'description' => $request->description,
             'genre' => $request->genre,
+            'purchase_link' => $request->purchase_link,
         ]);
 
         return redirect()->route('books.index');
