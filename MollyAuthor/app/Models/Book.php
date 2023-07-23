@@ -14,6 +14,8 @@ class Book extends Model
         'genre',
         'description',
         'purchase_link',
+        'purchase_second_link',
+        'purchase_third_link',
         'cover',
     ];
 }
