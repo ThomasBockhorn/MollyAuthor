@@ -44,6 +44,8 @@ class BooksController extends Controller
             'description' => $request->description,
             'genre' => $request->genre,
             'purchase_link' => $request->purchase_link,
+            'purchase_second_link' => $request->purchase_second_link ?? '',
+            'purchase_third_link' => $request->purchase_third_link ?? '',
         ]);
 
         return redirect()->route('books.index');
@@ -76,6 +78,8 @@ class BooksController extends Controller
             'description' => $request->description,
             'genre' => $request->genre,
             'purchase_link' => $request->purchase_link,
+            'purchase_second_link' => $request->purchase_second_link ?? '',
+            'purchase_third_link' => $request->purchase_third_link ?? '',
         ]);
 
         return redirect()->route('books.index');
