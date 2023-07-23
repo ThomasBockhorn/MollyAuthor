@@ -13,26 +13,32 @@
                 <h2 class="text-4xl text-center m-5">
                     Writing for Young Readers
                 </h2>
+                <div class="flex">
+                    <p class="text-lg m-5">
+                        The first in a series of four graphic novels about
+                        12-year-old Drew Daniels, who fights for justice and
+                        saves the day as The Fantastic Freewheeler!
+                    </p>
+                    <img
+                        id="molly-portrait"
+                        src="img/MollyPortrait.jpg"
+                        alt="Molly Portrait"
+                        class="rounded m-5"
+                    />
+                </div>
                 <h3 class="text-2xl text-center m-7">Upcoming Events:</h3>
                 <ul class="m-5">
                     <li v-for="event in events" :key="event.id" class="mt-3">
                         <hr />
-                        <h3 class="text-2xl text-center mb-2">
+                        <h3 class="text-xl text-center mb-2">
                             {{ event.title }}
                         </h3>
-                        <p class="text-xl">{{ event.location }}</p>
-                        <p class="text-xl">{{ event.description }}</p>
-                        <p class="text-xl">{{ event.date }}</p>
+                        <p class="text-lg">{{ event.location }}</p>
+                        <p class="text-lg">{{ event.description }}</p>
+                        <p class="text-lg">{{ event.date }}</p>
                         <hr />
                     </li>
                 </ul>
-                <hr />
-                <img
-                    id="molly-portrait"
-                    src="img/MollyPortrait.jpg"
-                    alt="Molly Portrait"
-                    class="rounded m-5 d-block w-100"
-                />
             </div>
         </div>
     </GuestLayout>
