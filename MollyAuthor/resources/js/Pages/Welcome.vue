@@ -13,9 +13,10 @@
                 <h2 class="text-4xl text-center m-5">
                     Writing for Young Readers
                 </h2>
-                <hr />
+                <h3 class="text-2xl text-center m-7">Upcoming Events:</h3>
                 <ul class="m-5">
                     <li v-for="event in events" :key="event.id" class="mt-3">
+                        <hr />
                         <h3 class="text-2xl text-center mb-2">
                             {{ event.title }}
                         </h3>
