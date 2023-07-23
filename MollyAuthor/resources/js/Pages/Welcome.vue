@@ -20,8 +20,8 @@
                 </p>
                 <p class="m-5 text-xl">
                     Just like Drew Daniels, the boy who becomes a superhero
-                    known as The Fantastic Freewheeler, Molly Felder has a
-                    physical disability called cerebral palsy (CP). CP is
+                    known as The Fantastic Freewheeler, author Molly Felder has
+                    a physical disability called cerebral palsy (CP). CP is
                     different for every person who has it. Molly can’t walk, so
                     she uses a wheelchair—and so does Drew!
                 </p>
