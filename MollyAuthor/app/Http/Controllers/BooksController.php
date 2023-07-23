@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookRequest;
 use App\Models\Book;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
@@ -12,7 +12,7 @@ class BooksController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): \Inertia\Response
     {
         $books = Book::all();
 
@@ -30,8 +30,9 @@ class BooksController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): \Illuminate\Http\RedirectResponse
+    public function store(BookRequest $request): \Illuminate\Http\RedirectResponse
     {
+
         if ($request->hasFile('cover')) {
             $fileName = time().'.'.$request->cover->extension();
 
@@ -62,7 +63,7 @@ class BooksController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request , Book $book)
+    public function update(BookRequest $request , Book $book)
     {
         if ($request->hasFile('cover')) {
             $fileName = time().'.'.$request->cover->extension();

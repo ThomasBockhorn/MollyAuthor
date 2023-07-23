@@ -24,7 +24,7 @@ class BookRequest extends FormRequest
         return [
             'title' => 'required|string|max:255',
             'genre' => 'required|string|max:255',
-            'description' => 'required|text',
+            'description' => 'required|string',
             'purchase_link' => 'required|url',
             'purchase_second_link' => 'nullable|url',
             'purchase_third_link' => 'nullable|url',
