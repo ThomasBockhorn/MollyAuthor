@@ -63,7 +63,7 @@ class BooksController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(BookRequest $request , Book $book)
+    public function update(BookRequest $request, Book $book)
     {
         if ($request->hasFile('cover')) {
             $fileName = time().'.'.$request->cover->extension();
