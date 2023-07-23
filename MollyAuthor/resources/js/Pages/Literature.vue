@@ -3,7 +3,7 @@
         <div class="m-5">
             <div class="grid sm:grid-cols-2 sm:gap-4 justify-items-center m-10">
                 <div
-                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow"
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow m-5"
                     v-for="book in books"
                     :key="book.id"
                 >

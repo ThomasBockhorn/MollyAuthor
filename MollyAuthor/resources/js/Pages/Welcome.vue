@@ -1,45 +1,52 @@
 <template>
     <GuestLayout>
-        <div class="grid sm:grid-cols-2 sm:gap-4 justify-items-center m-10">
-            <div>
-                <img
-                    class="rounded"
-                    src="img/book_image_1.jpg"
-                    alt="book cover"
-                />
+        <h1 class="text-4xl text-center m-5">
+            <em>Writing for Young Readers</em>
+        </h1>
+        <div class="grid sm:grid-cols-2 sm:gap-2 justify-items-center m-10">
+            <img
+                class="rounded w-1/2 m-5"
+                src="img/book_image_1.jpg"
+                alt="book cover"
+            />
+            <div class="flex-col w-1/2">
+                <h3 class="text-2xl text-center m-5">
+                    <em>The Fantastic Freewheeler: Sixth-Grade Superhero!</em>
+                </h3>
+                <p class="m-5 text-xl">
+                    The first in a series of four graphic novels about
+                    12-year-old Drew Daniels, who fights for justice and saves
+                    the day as The Fantastic Freewheeler!
+                </p>
+                <p class="m-5 text-xl">
+                    Just like Drew Daniels, the boy who becomes a superhero
+                    known as The Fantastic Freewheeler, Molly Felder has a
+                    physical disability called cerebral palsy (CP). CP is
+                    different for every person who has it. Molly can’t walk, so
+                    she uses a wheelchair—and so does Drew!
+                </p>
             </div>
-            <div>
-                <h1 class="text-4xl text-center m-5">Molly Felder</h1>
-                <h2 class="text-4xl text-center m-5">
-                    Writing for Young Readers
-                </h2>
-                <div class="flex">
-                    <p class="text-lg m-5">
-                        The first in a series of four graphic novels about
-                        12-year-old Drew Daniels, who fights for justice and
-                        saves the day as The Fantastic Freewheeler!
-                    </p>
-                    <img
-                        id="molly-portrait"
-                        src="img/MollyPortrait.jpg"
-                        alt="Molly Portrait"
-                        class="rounded m-5"
-                    />
-                </div>
-                <h3 class="text-2xl text-center m-7">Upcoming Events:</h3>
-                <ul class="m-5">
-                    <li v-for="event in events" :key="event.id" class="mt-3">
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="justify-items-center m-10">
+            <ul class="w-full">
+                <h2 class="text-2xl m-5 text-center">Upcoming Events:</h2>
+                <div v-if="Object.keys(events).length != 0">
+                    <li v-for="event in events" :key="event.id">
                         <hr />
-                        <h3 class="text-xl text-center mb-2">
-                            {{ event.title }}
-                        </h3>
-                        <p class="text-lg">{{ event.location }}</p>
-                        <p class="text-lg">{{ event.description }}</p>
-                        <p class="text-lg">{{ event.date }}</p>
+                        <p class="text-center">{{ event.title }}</p>
+                        <p>{{ event.location }}</p>
+                        <p>{{ event.description }}</p>
+                        <p>{{ event.date }}</p>
                         <hr />
                     </li>
-                </ul>
-            </div>
+                </div>
+                <div v-else>
+                    <p class="text-center">No events scheduled at this time.</p>
+                </div>
+            </ul>
         </div>
     </GuestLayout>
 </template>
