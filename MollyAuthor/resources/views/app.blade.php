@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fantastic Freewheeler kidlit">
+        <meta name="author" content="Molly Felder">
+        <meta name="keywords" content="Molly Felder author Fantastic Freewheeler kidlit children literature">
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
