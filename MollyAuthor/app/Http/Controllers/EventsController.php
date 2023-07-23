@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EventRequest;
 use App\Models\Event;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class EventsController extends Controller
@@ -29,7 +29,7 @@ class EventsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
         Event::create([
             'title' => $request->title,
@@ -52,8 +52,9 @@ class EventsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Event $event)
+    public function update(EventRequest $request, Event $event)
     {
+
         $event->update([
             'title' => $request->title,
             'description' => $request->description,

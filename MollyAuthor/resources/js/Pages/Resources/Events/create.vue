@@ -97,6 +97,7 @@ export default {
 
         function submit() {
             form.post("/events", form);
+            form.reset();
         }
 
         return {
