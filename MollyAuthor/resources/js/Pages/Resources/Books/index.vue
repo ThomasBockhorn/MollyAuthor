@@ -33,6 +33,16 @@
                                 book.purchase_link
                             }}</a>
                         </p>
+                        <p class="mb-3 font-normal text-gray-700">
+                            <a href="{{ book.purchase_second_link }}">{{
+                                book.purchase_second_link
+                            }}</a>
+                        </p>
+                        <p class="mb-3 font-normal text-gray-700">
+                            <a href="{{ book.purchase_third_link }}">{{
+                                book.purchase_third_link
+                            }}</a>
+                        </p>
                         <Link
                             :href="route('books.edit', book.id)"
                             method="get"
