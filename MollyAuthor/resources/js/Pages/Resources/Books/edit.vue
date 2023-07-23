@@ -84,6 +84,32 @@
                         v-model="form.purchase_link"
                     />
                 </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <label
+                        class="block mb-2 text-sm font-medium text-gray-500"
+                        for="purchase_second_link"
+                        >Second Purchase Link</label
+                    >
+                    <input
+                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                        id="purchase_second_link"
+                        type="url"
+                        v-model="form.purchase_second_link"
+                    />
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <label
+                        class="block mb-2 text-sm font-medium text-gray-500"
+                        for="purchase_third_link"
+                        >Third Purchase Link</label
+                    >
+                    <input
+                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                        id="purchase_third_link"
+                        type="url"
+                        v-model="form.purchase_third_link"
+                    />
+                </div>
                 <button
                     type="submit"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
@@ -116,6 +142,8 @@ export default {
             description: props.book.description,
             cover: props.book.cover,
             purchase_link: props.book.purchase_link,
+            purchase_second_link: props.book.purchase_second_link,
+            purchase_third_link: props.book.purchase_third_link,
         });
 
         function submit() {
@@ -128,6 +156,8 @@ export default {
                     description: form.description,
                     cover: form.cover,
                     purchase_link: form.purchase_link,
+                    purchase_second_link: form.purchase_second_link,
+                    purchase_third_link: form.purchase_third_link,
                 },
                 {
                     preserveState: true,
