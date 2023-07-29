@@ -1,6 +1,8 @@
 <template>
     <GuestLayout>
         <div class="m-5">
+            <h1 class="text-4xl text-center m-5">Molly Felder</h1>
+            <h2 class="text-4xl text-center m-5">Books</h2>
             <div class="grid sm:grid-cols-2 sm:gap-4 justify-items-center m-10">
                 <div
                     class="max-w-sm bg-white border border-gray-200 rounded-lg shadow m-5"
