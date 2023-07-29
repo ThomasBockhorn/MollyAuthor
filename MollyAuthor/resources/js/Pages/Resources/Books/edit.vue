@@ -66,7 +66,6 @@
                         id="file_input"
                         type="file"
                         accept="image/*"
-                        required
                         @change="onChangeFile"
                     />
                 </div>
@@ -74,7 +73,7 @@
                     <label
                         class="block mb-2 text-sm font-medium text-gray-500"
                         for="purchase_link"
-                        >Purchase Link</label
+                        >Amazon Link</label
                     >
                     <input
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
@@ -88,7 +87,7 @@
                     <label
                         class="block mb-2 text-sm font-medium text-gray-500"
                         for="purchase_second_link"
-                        >Second Purchase Link</label
+                        >Barnes and Noble Link</label
                     >
                     <input
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
@@ -101,7 +100,7 @@
                     <label
                         class="block mb-2 text-sm font-medium text-gray-500"
                         for="purchase_third_link"
-                        >Third Purchase Link</label
+                        >Bookshop.com</label
                     >
                     <input
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
@@ -175,7 +174,9 @@ export default {
     },
     methods: {
         onChangeFile(e) {
-            this.form.cover = e.target.files[0];
+            if (e.target.files.length > 0) {
+                this.form.cover = e.target.files[0];
+            }
         },
     },
 };

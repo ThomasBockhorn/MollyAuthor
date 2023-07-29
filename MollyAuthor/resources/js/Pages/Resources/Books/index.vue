@@ -29,19 +29,21 @@
                             {{ book.description }}
                         </p>
                         <p class="mb-3 font-normal text-gray-700">
-                            <a :href="book.purchase_link">{{
-                                book.purchase_link
-                            }}</a>
+                            <a :href="book.purchase_link">Amazon</a>
                         </p>
-                        <p class="mb-3 font-normal text-gray-700">
-                            <a :href="book.purchase_second_link">{{
-                                book.purchase_second_link
-                            }}</a>
+                        <p
+                            class="mb-3 font-normal text-gray-700"
+                            v-if="book.purchase_second_link"
+                        >
+                            <a :href="book.purchase_second_link"
+                                >Barnes and Noble</a
+                            >
                         </p>
-                        <p class="mb-3 font-normal text-gray-700">
-                            <a :href="book.purchase_third_link">{{
-                                book.purchase_third_link
-                            }}</a>
+                        <p
+                            class="mb-3 font-normal text-gray-700"
+                            v-if="book.purchase_second_link"
+                        >
+                            <a :href="book.purchase_third_link">Bookshop.org</a>
                         </p>
                         <Link
                             :href="route('books.edit', book.id)"
