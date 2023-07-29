@@ -1,8 +1,9 @@
 <template>
     <GuestLayout>
-        <h1 class="text-4xl text-center m-5">
+        <h1 class="text-4xl text-center m-5">Molly Felder</h1>
+        <h2 class="text-4xl text-center m-5">
             <em>Writing for Young Readers</em>
-        </h1>
+        </h2>
         <div class="grid sm:grid-cols-2 sm:gap-2 justify-items-center m-10">
             <img
                 class="rounded w-1/2 m-5"
