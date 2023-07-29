@@ -6,16 +6,16 @@
         </h2>
         <div class="grid sm:grid-cols-2 sm:gap-4 justify-items-center m-10">
             <img class="rounded" src="img/book_image_1.jpg" alt="book cover" />
-            <div class="flex-col w-1/2">
+            <div class="flex-col sm:w-1/2">
                 <h3 class="text-2xl text-center m-5">
                     <em>The Fantastic Freewheeler: Sixth-Grade Superhero!</em>
                 </h3>
-                <p class="text-xl mb-5">
+                <p class="m-5 text-xl">
                     The first in a series of four graphic novels about
                     12-year-old Drew Daniels, who fights for justice and saves
                     the day as The Fantastic Freewheeler!
                 </p>
-                <p class="text-xl">
+                <p class="m-5 text-xl">
                     Just like Drew, author Molly Felder has a physical
                     disability called cerebral palsy (CP). CP is different for
                     every person who has it. Molly can’t walk, so she uses a
