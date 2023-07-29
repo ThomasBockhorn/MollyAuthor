@@ -4,12 +4,8 @@
         <h2 class="text-4xl text-center m-5">
             <em>Writing for Young Readers</em>
         </h2>
-        <div class="grid sm:grid-cols-2 sm:gap-2 justify-items-center m-10">
-            <img
-                class="rounded w-1/2 m-5"
-                src="img/book_image_1.jpg"
-                alt="book cover"
-            />
+        <div class="grid sm:grid-cols-2 sm:gap-4 justify-items-center m-10">
+            <img class="rounded" src="img/book_image_1.jpg" alt="book cover" />
             <div class="flex-col w-1/2">
                 <h3 class="text-2xl text-center m-5">
                     <em>The Fantastic Freewheeler: Sixth-Grade Superhero!</em>
